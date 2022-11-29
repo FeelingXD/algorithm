@@ -11,6 +11,7 @@
 #         if condition: break
 #     return 1 if s==[] else 0
 # 시간복잡도 o(n^3)
+
 def solution(s):
     stack = []
     for i in range(len(s)):
