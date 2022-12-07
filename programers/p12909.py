@@ -1,13 +1,12 @@
-#올바른괄호
-
+# 올바른괄호
 
 def solution(s):
-    sum=0
+    sum = 0
     for i in s:
-        if sum<0: 
+        if sum < 0:
             return False
-        if i =='(':
-            sum+=1
-        else :
-            sum-=1
-    return True if sum==0 else False
+        if i == '(':
+            sum += 1
+        else:
+            sum -= 1
+    return True if sum == 0 else False
