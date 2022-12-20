@@ -8,7 +8,7 @@
 # K<=M 을 항상 만족한다.
 
 # K=max sequence , M = amount ,N =len(list(input)
-
+# O(n)
 import sys
 K, M, N = map(int, sys.stdin.readline().split(' '))
 data = list(map(int, sys.stdin.readline().split()))
@@ -24,3 +24,17 @@ for i in range(M):
     else:
         answer += fst_data
 print(answer)
+
+# enhanced version wirte code more pyothonic O(1)
+first = data[0]
+second = data[1]
+
+
+count = int(M/(N+1))*N
+count += M % (N+1)
+
+result = 0
+result += (count)*first
+result += (M-count)*second
+
+print(result)
