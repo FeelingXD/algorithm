@@ -5,6 +5,7 @@
 
 # 입력 1: 첫 벗째 줄에서 얼음 틀의 세로 길이 n 과 가로의 길이가 주어진다.
 
+# DFS
 import sys
 graph = []
 n, m = map(int, sys.stdin.readline().split())
