@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 INF = int(1e9)  # 무한
 
-n, m = map(int, input().split())
+n, m = map(int, input().split())  # 노드 / 간선의 수 node /edge
 
 start = int(input())
 
@@ -43,7 +43,6 @@ def dijkstra(start: int):
 
 
 dijkstra(start)
-
 for i in range(1, n+1):
     if distance[i] == INF:
         print("INF")
