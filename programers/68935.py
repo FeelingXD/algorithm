@@ -13,12 +13,4 @@ def convertion(n: int, b: int):
 
 
 def solution(n):
-    answer = 0
-    for i, v in enumerate(convertion(n, 3)):
-        if v != 0:
-            answer += int(v)*3**i
-    return answer
-
-
-convertion(1, 3)
-print("🐍 File: programers/#test.py | Line: 19 | undefined ~ convertion(1,3)", convertion(1, 3))
+    return int(convertion(n, 3)[::-1], 3)
