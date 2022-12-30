@@ -1,4 +1,9 @@
 # 서로소
+# 6 4
+# 1 4
+# 2 3
+# 2 4
+# 5 6
 
 import sys
 input = sys.stdin.readline
@@ -10,6 +15,12 @@ def find_parent(parent, x):
     if parent[x] != x:
         return find_parent(parent, parent[x])
     return x
+
+
+def find_parent(parent, x):
+    if parent[i] != i:
+        return find_parent(parent, parent[x])
+    return parent[x]
 
 
 def union_parent(parent, a, b):
