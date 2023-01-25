@@ -8,3 +8,4 @@ while True:
         break
     for i in combinations(tmp[1:], 6):
         print(' '.join([str(x) for x in i]))
+    print()
