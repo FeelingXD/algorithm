@@ -1,7 +1,8 @@
-def hanoi(n, start, by, end):
-    if (n == 1):
-        print(f'원반 1 to {end}')
+def hanoi(n, start, end, by):
+    if n == 1:
+        print(f'{start} {end}')
+        return
     else:
-        hanoi(n-1, start, end, by)
-        print(f'원반 {n} {start} to {end}')
-        hanoi(n-1, by, start, end)
+        hanoi(n-1, start, by, end)
+        print(f'{start} {end}')
+        hanoi(n-1, by, end, start)
