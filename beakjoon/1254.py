@@ -1,3 +1,4 @@
+# 팰린드롬 만들기
 import sys
 input = sys.stdin.readline
 
@@ -12,4 +13,3 @@ def len_pelindrom(text):
 
 pellen = len_pelindrom(text)
 print(len_pelindrom(text) if pellen == len(
-    text) else len(text)+(len(text)-pellen))
