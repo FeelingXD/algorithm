@@ -1,4 +1,4 @@
-import time
+# 구간합 구하기 5
 import sys
 input = sys.stdin.readline
 
