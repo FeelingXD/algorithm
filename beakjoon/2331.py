@@ -17,7 +17,7 @@ while True:
         tmp //= 10
 
     if tot in dp:
-        print(dp.index(tot)-1)
+        print(max(dp.index(tot)-1, 0))
         break
     else:
         dp[index] = tot
