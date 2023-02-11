@@ -45,6 +45,5 @@ for i in range(maxNum):
                 bfs(graph, visited, j, k, i)
                 cnt += 1
 
-    if result < cnt:
-        result = cnt
+    result = max(result, cnt)
 print(result)
