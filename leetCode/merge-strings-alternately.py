@@ -1,3 +1,4 @@
+from itertools import zip_longest
 from collections import deque
 
 
@@ -15,3 +16,12 @@ class Solution:
             else:
                 answer = answer+list(word2)
         return ''.join(answer)
+
+
+class Solution2:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        answer = []
+        word1 = deque(word1)
+        for value in zip_longest(word1, word2, fillvalue=""):
+            answer.append(value)
+        return ''.join([v for i in answer for v in i])
