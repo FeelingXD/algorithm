@@ -6,3 +6,6 @@ class Solution(object):
         :rtype: None Do not return anything, modify nums in-place instead.
         """
         nums.sort(key=lambda x: x == 0)
+
+
+list
