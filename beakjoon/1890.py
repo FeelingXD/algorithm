@@ -15,4 +15,3 @@ for i in range(n):
             dp[i+board[i][j]][j] += dp[i][j]
         if j + board[i][j] < n:
             dp[i][j+board[i][j]] += dp[i][j]
-print(dp)
