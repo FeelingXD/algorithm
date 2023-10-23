@@ -2,22 +2,25 @@
 dic = {'{': '}', '[': ']', '(': ')'}
 OPEN = ('(', '{', '[')
 CLOSE = (')', '}', ']')
+ERROR = False
 
 
 def check(s):
     stack = []
     for c in s:
-        if not stack and c in OPEN:
-            stack.append(c)
-        else:
-            if not stack and c not in OPEN:
-                return False
-            elif stack and c in CLOSE and dic[stack[-1]] == c:
-                stack.pop()
-            elif stack and c in OPEN:
+        if not stack:
+            if c in OPEN:
                 stack.append(c)
-            elif stack and c in CLOSE:
+            else:
                 return False
+        else:
+            if c in OPEN:
+                stack.append(c)
+            else:
+                if dic.get(stack[-1], ERROR) == c:
+                    stack.pop()
+                else:
+                    return False
     return True if not stack else False
     pass
 
