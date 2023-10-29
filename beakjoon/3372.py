@@ -4,7 +4,7 @@ from collections import deque
 input = sys.stdin.readline
 
 
-def drawboard(n):
+def drawboard(n):  # board 그리기
     board = []
     for _ in range(n):
         board.append(list(map(int, input().split())))
@@ -15,12 +15,6 @@ def drawboard(n):
 def solution():
     n = int(input())
     board = drawboard(n)
-    return bfs(n, board)
-    pass
-
-
-def bfs(n, board):
-
     dp = [[0]*n for _ in range(n)]
     dp[0][0] = 1
     for y in range(n):
