@@ -1,4 +1,4 @@
-
+# 과제수
 def subtract_times(time1, time2):
     # 시간을 시간 단위와 분 단위로 변환
     hours1, minutes1 = map(int, time1.split(':'))
@@ -25,7 +25,7 @@ def solution(plans):
 
     for i in range(len(plans)):
         name, st, pt = plans[i]
-        while left and left_time:  # 멈춰둔게있으면
+        while left and 0 <= left_time:  # 멈춰둔게있으면
             _name, _pt = left.pop()  # 최근에추가한걸 뺌
             if left_time >= _pt:
                 left_time -= _pt
