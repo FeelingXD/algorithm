@@ -1,4 +1,4 @@
-# MVP 다이아몬드 (Normal)
+# MVP 다이아몬드 (Hard)
 import sys
 input =sys.stdin.readline
 
